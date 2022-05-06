@@ -1,16 +1,9 @@
-import requests
-from bs4 import BeautifulSoup as BS
 
-
-page = 1
-while True:
-    r = requests.get("https://stopgame.ru/articles/new/p" + str(page))
-    html = BS(r.content, 'html.parser')
-    items = html.select('.items > .article-summary')
-    if len(items):
-        for el in items:
-            title = el.select('.caption > a')
-            print(title[0].text)
-            page += 1
-    else:
-        break
+# f = open("24data/24-157.txt")
+# file = f.read()
+# my_list = []
+# for i in range(1, len(file)-1):
+#     if file[i-1] == file[i+1]:
+#         my_list.append(file[i])
+# print(max(set(my_list), key=lambda x: my_list.count(x)), my_list[])
+# print(dict((x,my_list.count(x)) for x in set(my_list) if my_list.count(x) > 1))
