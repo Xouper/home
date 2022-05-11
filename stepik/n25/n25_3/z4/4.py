@@ -1,7 +1,7 @@
 def f(n):
     my_del = []
     d = 2
-    while d * d < n:
+    while d * d <= n:
         if n % d == 0:
             my_del.append(d)
             my_del.append(n // d)
