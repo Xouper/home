@@ -13,6 +13,7 @@ def n(n):
             else:
                 continue
 
+
 k = 0
 for i in range(452021, 1000000):
     if n(i) != -1 and n(i) is not None:
