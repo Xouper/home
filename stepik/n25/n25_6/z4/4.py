@@ -3,7 +3,7 @@
 # чисел и разницу между максимальным и минимальным из них.
 def isprime(n):
     d = 2
-    while d * d < n:
+    while d * d <= n:
         if n % d == 0:
             return False
         d += 1
@@ -29,6 +29,8 @@ def deliteli(n):
         proizved = proizved * x
     if len(my_list) == 3 and proizved == n:
         return my_list
+    else:
+        return 0
 
 
 k = 0
@@ -36,7 +38,7 @@ minim = 10**10
 maxim = 0
 for i in range(416782, 498324+1):
     f = deliteli(i)
-    if f != 0 and f is not None and f[0] % 10 == f[1] % 10 == f[2] % 10:
+    if f != 0 and f[0] % 10 == f[1] % 10 == f[2] % 10:
         k += 1
         minim = min(minim, i)
         maxim = i
