@@ -1,11 +1,11 @@
-for a in range(-1000, 10001):
+for a in range(-100,1000):
     fl = True
-    for x in range(1, 1001):
-        for y in range(1, 1001):
-            if not (((y + 2*x) < a) or (x > 20) or (y > 30)):
+    for x in range(0, 1000):
+        for y in range(0, 1000):
+            if (((y**2 <= a) <= (y < 12)) and ((x < 11) <= (x**2 < a))) == False:
                 fl = False
                 break
-        if not fl:
+        if fl == False:
             break
-    if fl:
+    if fl == True:
         print(a)
